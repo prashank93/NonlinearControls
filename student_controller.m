@@ -9,6 +9,8 @@
 function u = student_controller(t, x, consts, ctrl)
     % Replace line below with your controller
     % Ex: u = -ctrl.K*x ;
-    u = [0;
-         0] ;
+%     K = [0    1.1544   0    0    0    8.5728   0    0   -0.1575
+K = [ -0.7544 1.1544 0 0 -5.5728 8.5728 0 0 -0.1575;
+          0.1306    0  -37.6338   72.8933    1.6009    0  -48.6607   30.3236    0];
+    u = -K*x;
 end
