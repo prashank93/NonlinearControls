@@ -7,13 +7,8 @@
 % Output parameters:
 %   u  -  [thrust; torque] - two inputs to the rocket
 function u = student_controller(t, x, consts, ctrl)
-LfV = ctrl.LfVfun(x(1),x(2),x(3),x(4),x(5),x(6),x(7),x(8),x(9));
-LgV = ctrl.LgVfun(x(1),x(2),x(3),x(4),x(5),x(6),x(7),x(8),x(9));
-
-if all(LgV ~= 0)
-    u = - ( LfV + sqrt(LfV^2 + (LgV * LgV')^2) / (LgV * LgV')) * LgV;
-    u = u';
-else
-    u = [0;0];
-end
+    % Replace line below with your controller
+    % Ex: u = -ctrl.K*x ;
+    u = [0;
+         0] ;
 end
