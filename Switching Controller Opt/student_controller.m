@@ -36,9 +36,9 @@ end
 % 
 if abs(x(3)) < .2 && abs(x(7)) < .1 || done == 1
     u = -ctrl.K*x;
-    if done == 0
-        disp('switched')
-    end
+%     if done == 0
+%         disp('switched')
+%     end
     done = 1;
 end
 end
