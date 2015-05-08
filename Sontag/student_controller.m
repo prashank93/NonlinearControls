@@ -13,7 +13,7 @@ global done
 % LgV = eval(subs(ctrl.LgV,sym_vec,x));
 
 if done == 0
-    x(2) = x(2) - 150;
+    x(2) = x(2) - 200;
 end
 
 LfV = ctrl.LfVfun(x(1),x(2),x(3),x(4),x(5),x(6),x(7),x(8),x(9));
@@ -32,8 +32,8 @@ if all(LgV ~= 0)
 else
     u = [0;0];
 end
-
-if abs(x(3)) < 0.05 && abs(x(7)) < .1 && abs(x(5)) < 5 || done == 1
+% && abs(x(5)) < 5
+if abs(x(3)) < 0.05 && abs(x(7)) < .1 || done == 1
     u = -ctrl.K*x;
     done = 1;
 end
